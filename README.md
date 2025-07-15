@@ -17,4 +17,12 @@ This project aims to be a modular, extensible replacement backend for OPNsense-s
   - WireGuard, DHCP, DNS services
 - Designed for integration with external UI (forced from OPENSENSE)
 
+## Create virtual environment and install dependencies
 
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+## Run development server
+
+uvicorn nftctl_api.main:app --app-dir src --host 0.0.0.0 --port 8000 --reload
